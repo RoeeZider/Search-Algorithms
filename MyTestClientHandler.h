@@ -4,32 +4,23 @@
 
 #ifndef ADVANCEDPROG2_MYTESTCLIENTHANDLER_H
 #define ADVANCEDPROG2_MYTESTCLIENTHANDLER_H
-
-
-class MyTestClientHandler {
-
-};
-
-
-#endif //ADVANCEDPROG2_MYTESTCLIENTHANDLER_H
-
-
-/*
- * ifndef MILE_STONE2__MYTESTCLIENTHANDLER_H_
-#define MILE_STONE2__MYTESTCLIENTHANDLER_H_
 #include "Solver.h"
 #include "Server.h"
 #include "FileCacheManager.h"
 #include <iostream>
+#include "CacheManager.h"
+#include "ClientHandler.h"
 using namespace server_side;
-class MyTestClientHandler: public ClientHandler {
-  Solver<string,string> *solver;
-  CacheManager<string, string> *file_cache;
-  virtual void handleClient(int server_socket);
- public:
-  MyTestClientHandler(Solver<string,string> *solver_,CacheManager<string,string>* cache) {
-    this->solver = solver_;
-    this->file_cache = cache;
-  }
+class MyTestClientHandler : public ClientHandler{
+    Solver<string,string> *solver;
+    CacheManager<string, string> *cache;
+public:
+    virtual void handleClient(int server_socket);
+    MyTestClientHandler(Solver<string,string> *mySolver,CacheManager<string,string>* myCache) {
+        this->solver = mySolver;
+        this->cache = myCache;
+    }
 };
- */
+
+
+#endif //ADVANCEDPROG2_MYTESTCLIENTHANDLER_H

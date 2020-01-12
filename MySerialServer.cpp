@@ -4,6 +4,7 @@
 
 #include <unistd.h>
 #include "MySerialServer.h"
+bool MySerialServer::shouldStop = false;
 
 void MySerialServer::open(int port, ClientHandler *c) {
     int sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -27,7 +28,7 @@ void MySerialServer::open(int port, ClientHandler *c) {
 void MySerialServer::start(int sockfd, sockaddr_in address, ClientHandler *c) {
 
     int iResult, server_socket, valRead;
-    char bufferIn[1500] = {0};
+    char bufferIn[1024] = {0};
     string bufferOut;
     while (!MySerialServer::shouldStop) {
         fd_set rfds;

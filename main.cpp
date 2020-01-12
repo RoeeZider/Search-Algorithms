@@ -1,17 +1,24 @@
 #include <iostream>
+#include "MySerialServer.h"
+#include "CacheManager.h"
+#include "stringReverser.h"
+#include "MyTestClientHandler.h"
+
 using namespace std;
 
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-
+    MySerialServer* s = new MySerialServer();
+    CacheManager<string, string>* fileCache= new FileCacheManager<string, string>();
+    Solver<string,string>* solver = new StringReverser();
+    ClientHandler *c  = new MyTestClientHandler(solver,fileCache);
+    s->open(12345, c);
 }
 
 
 /*
- *  MySerialServer* s = new MySerialServer();
+ *
   CacheManager<string, string>* fileCache= new FileCacheManager<string, string>();
   Solver<string,string>* solver = new StringReverser();
   Searcher<Point*,string> * bfs = new BestFirstSearch<Point*,string>();

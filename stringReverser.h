@@ -13,8 +13,7 @@ class stringReverser {
 
 #endif //ADVANCEDPROG2_STRINGREVERSER_H
 
-/*
- *
+
 #include <string>
 #include <algorithm>
 #include "Solver.h"
@@ -27,4 +26,3 @@ public:
         return solution;
     }
 };
- */
