@@ -14,7 +14,7 @@ using namespace std;
 
 void MyTestClientHandler:: handleClient(int server_socket) {
     while (true) {
-        char buffer[1500] = {0};
+        char buffer[4096] = {0};
         //receive massage
         int valRead = read(server_socket, buffer, 1500);
         if (valRead == 0) {
