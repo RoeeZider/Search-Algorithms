@@ -1,0 +1,4 @@
+/opt/clion-2019.2.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc-9 -DCMAKE_CXX_COMPILER=/usr/bin/g++-9 -G "CodeBlocks - Unix Makefiles" /home/harelfeldman/CLionProjects/advancedProg2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug
