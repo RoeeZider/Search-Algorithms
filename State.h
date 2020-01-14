@@ -51,6 +51,9 @@ public:
     bool getInOpenList(){
         return inOpenList;
     };
+   T get_state(){
+       return this->state;
+   };
 };
 
 #endif //ADVANCEDPROG2_STATE_H

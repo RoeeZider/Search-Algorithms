@@ -258,6 +258,33 @@ MyTestClientHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/MyTestClientHandler.cpp.s
 .PHONY : MyTestClientHandler.cpp.s
 
+Point.o: Point.cpp.o
+
+.PHONY : Point.o
+
+# target to build an object file
+Point.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Point.cpp.o
+.PHONY : Point.cpp.o
+
+Point.i: Point.cpp.i
+
+.PHONY : Point.i
+
+# target to preprocess a source file
+Point.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Point.cpp.i
+.PHONY : Point.cpp.i
+
+Point.s: Point.cpp.s
+
+.PHONY : Point.s
+
+# target to generate assembly for a file
+Point.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Point.cpp.s
+.PHONY : Point.cpp.s
+
 Searcher.o: Searcher.cpp.o
 
 .PHONY : Searcher.o
@@ -339,6 +366,33 @@ stringReverser.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/stringReverser.cpp.s
 .PHONY : stringReverser.cpp.s
 
+tester.o: tester.cpp.o
+
+.PHONY : tester.o
+
+# target to build an object file
+tester.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/tester.cpp.o
+.PHONY : tester.cpp.o
+
+tester.i: tester.cpp.i
+
+.PHONY : tester.i
+
+# target to preprocess a source file
+tester.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/tester.cpp.i
+.PHONY : tester.cpp.i
+
+tester.s: tester.cpp.s
+
+.PHONY : tester.s
+
+# target to generate assembly for a file
+tester.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/tester.cpp.s
+.PHONY : tester.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -363,6 +417,9 @@ help:
 	@echo "... MyTestClientHandler.o"
 	@echo "... MyTestClientHandler.i"
 	@echo "... MyTestClientHandler.s"
+	@echo "... Point.o"
+	@echo "... Point.i"
+	@echo "... Point.s"
 	@echo "... Searcher.o"
 	@echo "... Searcher.i"
 	@echo "... Searcher.s"
@@ -372,6 +429,9 @@ help:
 	@echo "... stringReverser.o"
 	@echo "... stringReverser.i"
 	@echo "... stringReverser.s"
+	@echo "... tester.o"
+	@echo "... tester.i"
+	@echo "... tester.s"
 .PHONY : help
 
 

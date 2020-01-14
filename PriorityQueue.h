@@ -34,6 +34,14 @@ public:
     bool isEmpty(){
         return vec.empty();
     };
+    void update(State<T> s){
+        auto it=vec.begin();
+        while (!it.Equels(s)){
+            ++it;
+        }
+        this->vec.erase(it);
+        push(it);
+    }
 
 };
 

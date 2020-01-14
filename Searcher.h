@@ -7,32 +7,40 @@
 
 #include "PriorityQueue.h"
 #include "ISearcher.h"
-template <class T>
+
+template<class T>
 class Searcher : ISearcher<T> {
 private:
     int evaluateNodes;
     PriorityQueue<T> openList;
 public:
-    Searcher(){
-        openList= new PriorityQueue<T>;
-        this->evaluateNodes=0;
+    Searcher() {
+        openList = new PriorityQueue<T>;
+        this->evaluateNodes = 0;
     };
 
-    int getNumberOfNodesEvaluated(){
+    int getNumberOfNodesEvaluated() {
         return this->evaluateNodes;
     };
 
-    virtual vector<State<T>*>  search(Searchable<T> searchable) = 0;
-    State<T>* popOpenList(){
+    virtual vector<State<T> *> search(Searchable<T> searchable) = 0;
+
+    State<T> *popOpenList() {
         evaluateNodes++;
         return openList.pop();
     };
-    void addOpenList(State<T>& s){
+
+    void addOpenList(State<T> &s) {
         this->openList.push(s);
         s.setInOpenList();
     };
-    bool OpenListIsEmpty(){
+
+    bool OpenListIsEmpty() {
         return openList.isEmpty();
+    };
+
+    void updateOpenList(State<T> s) {
+        this->openList.update(s);
     };
 };
 
