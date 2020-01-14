@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o"
   "CMakeFiles/advancedProg2.dir/FileCacheManager.cpp.o"
+  "CMakeFiles/advancedProg2.dir/ISearcher.cpp.o"
   "CMakeFiles/advancedProg2.dir/MySerialServer.cpp.o"
   "CMakeFiles/advancedProg2.dir/MyTestClientHandler.cpp.o"
   "CMakeFiles/advancedProg2.dir/Searcher.cpp.o"

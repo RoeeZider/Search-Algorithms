@@ -123,6 +123,33 @@ advancedProg2/fast:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/build
 .PHONY : advancedProg2/fast
 
+BestFirstSearch.o: BestFirstSearch.cpp.o
+
+.PHONY : BestFirstSearch.o
+
+# target to build an object file
+BestFirstSearch.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o
+.PHONY : BestFirstSearch.cpp.o
+
+BestFirstSearch.i: BestFirstSearch.cpp.i
+
+.PHONY : BestFirstSearch.i
+
+# target to preprocess a source file
+BestFirstSearch.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.i
+.PHONY : BestFirstSearch.cpp.i
+
+BestFirstSearch.s: BestFirstSearch.cpp.s
+
+.PHONY : BestFirstSearch.s
+
+# target to generate assembly for a file
+BestFirstSearch.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.s
+.PHONY : BestFirstSearch.cpp.s
+
 FileCacheManager.o: FileCacheManager.cpp.o
 
 .PHONY : FileCacheManager.o
@@ -149,6 +176,33 @@ FileCacheManager.s: FileCacheManager.cpp.s
 FileCacheManager.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/FileCacheManager.cpp.s
 .PHONY : FileCacheManager.cpp.s
+
+ISearcher.o: ISearcher.cpp.o
+
+.PHONY : ISearcher.o
+
+# target to build an object file
+ISearcher.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/ISearcher.cpp.o
+.PHONY : ISearcher.cpp.o
+
+ISearcher.i: ISearcher.cpp.i
+
+.PHONY : ISearcher.i
+
+# target to preprocess a source file
+ISearcher.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/ISearcher.cpp.i
+.PHONY : ISearcher.cpp.i
+
+ISearcher.s: ISearcher.cpp.s
+
+.PHONY : ISearcher.s
+
+# target to generate assembly for a file
+ISearcher.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/ISearcher.cpp.s
+.PHONY : ISearcher.cpp.s
 
 MySerialServer.o: MySerialServer.cpp.o
 
@@ -294,9 +348,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... advancedProg2"
 	@echo "... edit_cache"
+	@echo "... BestFirstSearch.o"
+	@echo "... BestFirstSearch.i"
+	@echo "... BestFirstSearch.s"
 	@echo "... FileCacheManager.o"
 	@echo "... FileCacheManager.i"
 	@echo "... FileCacheManager.s"
+	@echo "... ISearcher.o"
+	@echo "... ISearcher.i"
+	@echo "... ISearcher.s"
 	@echo "... MySerialServer.o"
 	@echo "... MySerialServer.i"
 	@echo "... MySerialServer.s"

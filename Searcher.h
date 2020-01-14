@@ -1,25 +1,40 @@
 //
-// Created by harelfeldman on 1/13/20.
+// Created by harelfeldman on 1/14/20.
 //
 
 #ifndef ADVANCEDPROG2_SEARCHER_H
 #define ADVANCEDPROG2_SEARCHER_H
 
-#include "Searchable.h"
-
-class ISearcher {
-public:
-    virtual Solution search(Searchable searchable) = 0;
-    virtual int getNumberOfNodesEvaluated()=0;
-    virtual ~ISearcher();
-};
-
-class Searcher:ISearcher{
+#include "PriorityQueue.h"
+#include "ISearcher.h"
+template <class T>
+class Searcher : ISearcher<T> {
 private:
     int evaluateNodes;
+    PriorityQueue<T> openList;
 public:
-    Searcher();
-    int getNumberOfNodesEvaluated();
-    virtual Solution search(Searchable searchable) = 0;
+    Searcher(){
+        openList= new PriorityQueue<T>;
+        this->evaluateNodes=0;
+    };
+
+    int getNumberOfNodesEvaluated(){
+        return this->evaluateNodes;
+    };
+
+    virtual vector<State<T>*>  search(Searchable<T> searchable) = 0;
+    State<T>* popOpenList(){
+        evaluateNodes++;
+        return openList.pop();
+    };
+    void addOpenList(State<T>& s){
+        this->openList.push(s);
+        s.setInOpenList();
+    };
+    bool OpenListIsEmpty(){
+        return openList.isEmpty();
+    };
 };
+
+
 #endif //ADVANCEDPROG2_SEARCHER_H

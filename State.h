@@ -4,29 +4,52 @@
 
 #ifndef ADVANCEDPROG2_STATE_H
 #define ADVANCEDPROG2_STATE_H
+
+#include <cmath>
+
 template<class T>
 class State {
 private:
     T state;
     double cost;
-    State<T> camefrom;
+    State<T> *camefrom;
+    double totalCost;
+    bool inOpenList;
 public:
     State<T>(T s){
         this->state = s;
         this->cost = 0;
         this->camefrom = nullptr;
+        this->totalCost=-1;
+        this->inOpenList=false;
+        this->totalCost=0;
     };
 
     bool Equals(State<T> s){
         return state.Equals(s.state);
     };
 
-    void SetCost(double c){
-        this->cost = c;
+    void setTotalCost(double c){
+        this->totalCost = c;
+    };
+    double getTotalCost(){
+        return this->totalCost ;
     };
 
-    void SetCameFrom(State<T> s){
+    void setCameFrom(State<T>& s){
         this->camefrom = s;
+    };
+    double getCost(){
+        return this->cost;
+    };
+    State<T>* getCameFrom(){
+        return this->camefrom;
+    };
+    void setInOpenList(){
+        this->inOpenList=true;
+    };
+    bool getInOpenList(){
+        return inOpenList;
     };
 };
 

@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/BestFirstSearch.cpp">
+			<Option target="advancedProg2"/>
+		</Unit>
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/BestFirstSearch.h">
+			<Option target="advancedProg2"/>
+		</Unit>
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/CacheManager.h">
 			<Option target="advancedProg2"/>
 		</Unit>
@@ -96,6 +102,12 @@
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/FileCacheManager.h">
 			<Option target="advancedProg2"/>
 		</Unit>
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/ISearcher.cpp">
+			<Option target="advancedProg2"/>
+		</Unit>
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/ISearcher.h">
+			<Option target="advancedProg2"/>
+		</Unit>
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MySerialServer.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
@@ -106,6 +118,9 @@
 			<Option target="advancedProg2"/>
 		</Unit>
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MyTestClientHandler.h">
+			<Option target="advancedProg2"/>
+		</Unit>
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/PriorityQueue.h">
 			<Option target="advancedProg2"/>
 		</Unit>
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Searchable.h">

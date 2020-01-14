@@ -122,9 +122,35 @@ CMakeFiles/advancedProg2.dir/stringReverser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/stringReverser.cpp.s"
 	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harelfeldman/CLionProjects/advancedProg2/stringReverser.cpp -o CMakeFiles/advancedProg2.dir/stringReverser.cpp.s
 
+CMakeFiles/advancedProg2.dir/ISearcher.cpp.o: CMakeFiles/advancedProg2.dir/flags.make
+CMakeFiles/advancedProg2.dir/ISearcher.cpp.o: ../ISearcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/advancedProg2.dir/ISearcher.cpp.o"
+	/usr/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/advancedProg2.dir/ISearcher.cpp.o -c /home/harelfeldman/CLionProjects/advancedProg2/ISearcher.cpp
+
+CMakeFiles/advancedProg2.dir/ISearcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/advancedProg2.dir/ISearcher.cpp.i"
+	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/harelfeldman/CLionProjects/advancedProg2/ISearcher.cpp > CMakeFiles/advancedProg2.dir/ISearcher.cpp.i
+
+CMakeFiles/advancedProg2.dir/ISearcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/ISearcher.cpp.s"
+	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harelfeldman/CLionProjects/advancedProg2/ISearcher.cpp -o CMakeFiles/advancedProg2.dir/ISearcher.cpp.s
+
+CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o: CMakeFiles/advancedProg2.dir/flags.make
+CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o: ../BestFirstSearch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o"
+	/usr/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o -c /home/harelfeldman/CLionProjects/advancedProg2/BestFirstSearch.cpp
+
+CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.i"
+	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/harelfeldman/CLionProjects/advancedProg2/BestFirstSearch.cpp > CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.i
+
+CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.s"
+	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harelfeldman/CLionProjects/advancedProg2/BestFirstSearch.cpp -o CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.s
+
 CMakeFiles/advancedProg2.dir/Searcher.cpp.o: CMakeFiles/advancedProg2.dir/flags.make
 CMakeFiles/advancedProg2.dir/Searcher.cpp.o: ../Searcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/advancedProg2.dir/Searcher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/advancedProg2.dir/Searcher.cpp.o"
 	/usr/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/advancedProg2.dir/Searcher.cpp.o -c /home/harelfeldman/CLionProjects/advancedProg2/Searcher.cpp
 
 CMakeFiles/advancedProg2.dir/Searcher.cpp.i: cmake_force
@@ -142,6 +168,8 @@ advancedProg2_OBJECTS = \
 "CMakeFiles/advancedProg2.dir/MyTestClientHandler.cpp.o" \
 "CMakeFiles/advancedProg2.dir/FileCacheManager.cpp.o" \
 "CMakeFiles/advancedProg2.dir/stringReverser.cpp.o" \
+"CMakeFiles/advancedProg2.dir/ISearcher.cpp.o" \
+"CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o" \
 "CMakeFiles/advancedProg2.dir/Searcher.cpp.o"
 
 # External object files for target advancedProg2
@@ -152,10 +180,12 @@ advancedProg2: CMakeFiles/advancedProg2.dir/MySerialServer.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/MyTestClientHandler.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/FileCacheManager.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/stringReverser.cpp.o
+advancedProg2: CMakeFiles/advancedProg2.dir/ISearcher.cpp.o
+advancedProg2: CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/Searcher.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/build.make
 advancedProg2: CMakeFiles/advancedProg2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable advancedProg2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable advancedProg2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/advancedProg2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
