@@ -23,7 +23,7 @@ public:
         return this->evaluateNodes;
     };
 
-    virtual vector<State<T> *> search(Searchable<T> searchable) = 0;
+    virtual vector<State<T> *> search(Searchable<T>* searchable) = 0;
 
     State<T> *popOpenList() {
         evaluateNodes++;

@@ -111,6 +111,9 @@
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Matrix.h">
 			<Option target="advancedProg2"/>
 		</Unit>
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MyClientHandler.h">
+			<Option target="advancedProg2"/>
+		</Unit>
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MySerialServer.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
@@ -147,6 +150,12 @@
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Solver.h">
 			<Option target="advancedProg2"/>
 		</Unit>
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/SolverMatrix.cpp">
+			<Option target="advancedProg2"/>
+		</Unit>
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/SolverMatrix.h">
+			<Option target="advancedProg2"/>
+		</Unit>
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/State.h">
 			<Option target="advancedProg2"/>
 		</Unit>
@@ -157,12 +166,6 @@
 			<Option target="advancedProg2"/>
 		</Unit>
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/stringReverser.h">
-			<Option target="advancedProg2"/>
-		</Unit>
-		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/tester.cpp">
-			<Option target="advancedProg2"/>
-		</Unit>
-		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/tester.h">
 			<Option target="advancedProg2"/>
 		</Unit>
 		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/CMakeLists.txt">

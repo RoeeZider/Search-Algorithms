@@ -312,6 +312,33 @@ Searcher.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Searcher.cpp.s
 .PHONY : Searcher.cpp.s
 
+SolverMatrix.o: SolverMatrix.cpp.o
+
+.PHONY : SolverMatrix.o
+
+# target to build an object file
+SolverMatrix.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o
+.PHONY : SolverMatrix.cpp.o
+
+SolverMatrix.i: SolverMatrix.cpp.i
+
+.PHONY : SolverMatrix.i
+
+# target to preprocess a source file
+SolverMatrix.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.i
+.PHONY : SolverMatrix.cpp.i
+
+SolverMatrix.s: SolverMatrix.cpp.s
+
+.PHONY : SolverMatrix.s
+
+# target to generate assembly for a file
+SolverMatrix.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.s
+.PHONY : SolverMatrix.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -366,33 +393,6 @@ stringReverser.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/stringReverser.cpp.s
 .PHONY : stringReverser.cpp.s
 
-tester.o: tester.cpp.o
-
-.PHONY : tester.o
-
-# target to build an object file
-tester.cpp.o:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/tester.cpp.o
-.PHONY : tester.cpp.o
-
-tester.i: tester.cpp.i
-
-.PHONY : tester.i
-
-# target to preprocess a source file
-tester.cpp.i:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/tester.cpp.i
-.PHONY : tester.cpp.i
-
-tester.s: tester.cpp.s
-
-.PHONY : tester.s
-
-# target to generate assembly for a file
-tester.cpp.s:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/tester.cpp.s
-.PHONY : tester.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -423,15 +423,15 @@ help:
 	@echo "... Searcher.o"
 	@echo "... Searcher.i"
 	@echo "... Searcher.s"
+	@echo "... SolverMatrix.o"
+	@echo "... SolverMatrix.i"
+	@echo "... SolverMatrix.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... stringReverser.o"
 	@echo "... stringReverser.i"
 	@echo "... stringReverser.s"
-	@echo "... tester.o"
-	@echo "... tester.i"
-	@echo "... tester.s"
 .PHONY : help
 
 

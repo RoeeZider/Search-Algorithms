@@ -11,9 +11,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/harelfeldman/CLionProjects/advancedProg2/MyTestClientHandler.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/MyTestClientHandler.cpp.o"
   "/home/harelfeldman/CLionProjects/advancedProg2/Point.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/Point.cpp.o"
   "/home/harelfeldman/CLionProjects/advancedProg2/Searcher.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/Searcher.cpp.o"
+  "/home/harelfeldman/CLionProjects/advancedProg2/SolverMatrix.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o"
   "/home/harelfeldman/CLionProjects/advancedProg2/main.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/main.cpp.o"
   "/home/harelfeldman/CLionProjects/advancedProg2/stringReverser.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/stringReverser.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/tester.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/tester.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

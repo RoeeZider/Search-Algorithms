@@ -1,8 +1,10 @@
 #include <iostream>
+#include <vector>
 #include "MySerialServer.h"
 #include "CacheManager.h"
 #include "stringReverser.h"
 #include "MyTestClientHandler.h"
+
 
 using namespace std;
 

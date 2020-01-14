@@ -5,7 +5,7 @@
 #ifndef ADVANCEDPROG2_SOLVER_H
 #define ADVANCEDPROG2_SOLVER_H
 
-template<typename P, typename S>
+template<class P, class S>
 class Solver {
 public:
     virtual S solve(P problem)=0;

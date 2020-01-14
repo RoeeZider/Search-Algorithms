@@ -161,22 +161,9 @@ CMakeFiles/advancedProg2.dir/Searcher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/Searcher.cpp.s"
 	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harelfeldman/CLionProjects/advancedProg2/Searcher.cpp -o CMakeFiles/advancedProg2.dir/Searcher.cpp.s
 
-CMakeFiles/advancedProg2.dir/tester.cpp.o: CMakeFiles/advancedProg2.dir/flags.make
-CMakeFiles/advancedProg2.dir/tester.cpp.o: ../tester.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/advancedProg2.dir/tester.cpp.o"
-	/usr/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/advancedProg2.dir/tester.cpp.o -c /home/harelfeldman/CLionProjects/advancedProg2/tester.cpp
-
-CMakeFiles/advancedProg2.dir/tester.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/advancedProg2.dir/tester.cpp.i"
-	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/harelfeldman/CLionProjects/advancedProg2/tester.cpp > CMakeFiles/advancedProg2.dir/tester.cpp.i
-
-CMakeFiles/advancedProg2.dir/tester.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/tester.cpp.s"
-	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harelfeldman/CLionProjects/advancedProg2/tester.cpp -o CMakeFiles/advancedProg2.dir/tester.cpp.s
-
 CMakeFiles/advancedProg2.dir/Point.cpp.o: CMakeFiles/advancedProg2.dir/flags.make
 CMakeFiles/advancedProg2.dir/Point.cpp.o: ../Point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/advancedProg2.dir/Point.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/advancedProg2.dir/Point.cpp.o"
 	/usr/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/advancedProg2.dir/Point.cpp.o -c /home/harelfeldman/CLionProjects/advancedProg2/Point.cpp
 
 CMakeFiles/advancedProg2.dir/Point.cpp.i: cmake_force
@@ -186,6 +173,19 @@ CMakeFiles/advancedProg2.dir/Point.cpp.i: cmake_force
 CMakeFiles/advancedProg2.dir/Point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/Point.cpp.s"
 	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harelfeldman/CLionProjects/advancedProg2/Point.cpp -o CMakeFiles/advancedProg2.dir/Point.cpp.s
+
+CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o: CMakeFiles/advancedProg2.dir/flags.make
+CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o: ../SolverMatrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o"
+	/usr/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o -c /home/harelfeldman/CLionProjects/advancedProg2/SolverMatrix.cpp
+
+CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.i"
+	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/harelfeldman/CLionProjects/advancedProg2/SolverMatrix.cpp > CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.i
+
+CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.s"
+	/usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/harelfeldman/CLionProjects/advancedProg2/SolverMatrix.cpp -o CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.s
 
 # Object files for target advancedProg2
 advancedProg2_OBJECTS = \
@@ -197,8 +197,8 @@ advancedProg2_OBJECTS = \
 "CMakeFiles/advancedProg2.dir/ISearcher.cpp.o" \
 "CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o" \
 "CMakeFiles/advancedProg2.dir/Searcher.cpp.o" \
-"CMakeFiles/advancedProg2.dir/tester.cpp.o" \
-"CMakeFiles/advancedProg2.dir/Point.cpp.o"
+"CMakeFiles/advancedProg2.dir/Point.cpp.o" \
+"CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o"
 
 # External object files for target advancedProg2
 advancedProg2_EXTERNAL_OBJECTS =
@@ -211,8 +211,8 @@ advancedProg2: CMakeFiles/advancedProg2.dir/stringReverser.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/ISearcher.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/Searcher.cpp.o
-advancedProg2: CMakeFiles/advancedProg2.dir/tester.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/Point.cpp.o
+advancedProg2: CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/build.make
 advancedProg2: CMakeFiles/advancedProg2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable advancedProg2"
