@@ -8,7 +8,7 @@
 
 #include <string>
 #include <algorithm>
-
+#include "Solver.h"
 using namespace std;
 
 class StringReverser : public Solver<string, string> {

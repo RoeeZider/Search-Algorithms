@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion-2019.2.5/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/roee/Downloads/clion-2019.2.5/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion-2019.2.5/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/roee/Downloads/clion-2019.2.5/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/harelfeldman/CLionProjects/advancedProg2
+CMAKE_SOURCE_DIR = /home/roee/CLionProjects/mileStone-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/roee/CLionProjects/mileStone-2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/harelfeldman/CLionProjects/advancedProg2/cmake-build-de
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2019.2.5/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/roee/Downloads/clion-2019.2.5/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/clion-2019.2.5/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/roee/Downloads/clion-2019.2.5/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles /home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roee/CLionProjects/mileStone-2/cmake-build-debug/CMakeFiles /home/roee/CLionProjects/mileStone-2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roee/CLionProjects/mileStone-2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ advancedProg2/fast:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/build
 .PHONY : advancedProg2/fast
 
+AStar.o: AStar.cpp.o
+
+.PHONY : AStar.o
+
+# target to build an object file
+AStar.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/AStar.cpp.o
+.PHONY : AStar.cpp.o
+
+AStar.i: AStar.cpp.i
+
+.PHONY : AStar.i
+
+# target to preprocess a source file
+AStar.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/AStar.cpp.i
+.PHONY : AStar.cpp.i
+
+AStar.s: AStar.cpp.s
+
+.PHONY : AStar.s
+
+# target to generate assembly for a file
+AStar.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/AStar.cpp.s
+.PHONY : AStar.cpp.s
+
 BestFirstSearch.o: BestFirstSearch.cpp.o
 
 .PHONY : BestFirstSearch.o
@@ -150,6 +177,60 @@ BestFirstSearch.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.s
 .PHONY : BestFirstSearch.cpp.s
 
+BreadthFS.o: BreadthFS.cpp.o
+
+.PHONY : BreadthFS.o
+
+# target to build an object file
+BreadthFS.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/BreadthFS.cpp.o
+.PHONY : BreadthFS.cpp.o
+
+BreadthFS.i: BreadthFS.cpp.i
+
+.PHONY : BreadthFS.i
+
+# target to preprocess a source file
+BreadthFS.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/BreadthFS.cpp.i
+.PHONY : BreadthFS.cpp.i
+
+BreadthFS.s: BreadthFS.cpp.s
+
+.PHONY : BreadthFS.s
+
+# target to generate assembly for a file
+BreadthFS.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/BreadthFS.cpp.s
+.PHONY : BreadthFS.cpp.s
+
+Dfs.o: Dfs.cpp.o
+
+.PHONY : Dfs.o
+
+# target to build an object file
+Dfs.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Dfs.cpp.o
+.PHONY : Dfs.cpp.o
+
+Dfs.i: Dfs.cpp.i
+
+.PHONY : Dfs.i
+
+# target to preprocess a source file
+Dfs.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Dfs.cpp.i
+.PHONY : Dfs.cpp.i
+
+Dfs.s: Dfs.cpp.s
+
+.PHONY : Dfs.s
+
+# target to generate assembly for a file
+Dfs.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Dfs.cpp.s
+.PHONY : Dfs.cpp.s
+
 FileCacheManager.o: FileCacheManager.cpp.o
 
 .PHONY : FileCacheManager.o
@@ -176,33 +257,6 @@ FileCacheManager.s: FileCacheManager.cpp.s
 FileCacheManager.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/FileCacheManager.cpp.s
 .PHONY : FileCacheManager.cpp.s
-
-ISearcher.o: ISearcher.cpp.o
-
-.PHONY : ISearcher.o
-
-# target to build an object file
-ISearcher.cpp.o:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/ISearcher.cpp.o
-.PHONY : ISearcher.cpp.o
-
-ISearcher.i: ISearcher.cpp.i
-
-.PHONY : ISearcher.i
-
-# target to preprocess a source file
-ISearcher.cpp.i:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/ISearcher.cpp.i
-.PHONY : ISearcher.cpp.i
-
-ISearcher.s: ISearcher.cpp.s
-
-.PHONY : ISearcher.s
-
-# target to generate assembly for a file
-ISearcher.cpp.s:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/ISearcher.cpp.s
-.PHONY : ISearcher.cpp.s
 
 MySerialServer.o: MySerialServer.cpp.o
 
@@ -285,33 +339,6 @@ Point.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Point.cpp.s
 .PHONY : Point.cpp.s
 
-Searcher.o: Searcher.cpp.o
-
-.PHONY : Searcher.o
-
-# target to build an object file
-Searcher.cpp.o:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Searcher.cpp.o
-.PHONY : Searcher.cpp.o
-
-Searcher.i: Searcher.cpp.i
-
-.PHONY : Searcher.i
-
-# target to preprocess a source file
-Searcher.cpp.i:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Searcher.cpp.i
-.PHONY : Searcher.cpp.i
-
-Searcher.s: Searcher.cpp.s
-
-.PHONY : Searcher.s
-
-# target to generate assembly for a file
-Searcher.cpp.s:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/Searcher.cpp.s
-.PHONY : Searcher.cpp.s
-
 SolverMatrix.o: SolverMatrix.cpp.o
 
 .PHONY : SolverMatrix.o
@@ -338,6 +365,33 @@ SolverMatrix.s: SolverMatrix.cpp.s
 SolverMatrix.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.s
 .PHONY : SolverMatrix.cpp.s
+
+TestMatrix.o: TestMatrix.cpp.o
+
+.PHONY : TestMatrix.o
+
+# target to build an object file
+TestMatrix.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o
+.PHONY : TestMatrix.cpp.o
+
+TestMatrix.i: TestMatrix.cpp.i
+
+.PHONY : TestMatrix.i
+
+# target to preprocess a source file
+TestMatrix.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/TestMatrix.cpp.i
+.PHONY : TestMatrix.cpp.i
+
+TestMatrix.s: TestMatrix.cpp.s
+
+.PHONY : TestMatrix.s
+
+# target to generate assembly for a file
+TestMatrix.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/TestMatrix.cpp.s
+.PHONY : TestMatrix.cpp.s
 
 main.o: main.cpp.o
 
@@ -402,15 +456,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... advancedProg2"
 	@echo "... edit_cache"
+	@echo "... AStar.o"
+	@echo "... AStar.i"
+	@echo "... AStar.s"
 	@echo "... BestFirstSearch.o"
 	@echo "... BestFirstSearch.i"
 	@echo "... BestFirstSearch.s"
+	@echo "... BreadthFS.o"
+	@echo "... BreadthFS.i"
+	@echo "... BreadthFS.s"
+	@echo "... Dfs.o"
+	@echo "... Dfs.i"
+	@echo "... Dfs.s"
 	@echo "... FileCacheManager.o"
 	@echo "... FileCacheManager.i"
 	@echo "... FileCacheManager.s"
-	@echo "... ISearcher.o"
-	@echo "... ISearcher.i"
-	@echo "... ISearcher.s"
 	@echo "... MySerialServer.o"
 	@echo "... MySerialServer.i"
 	@echo "... MySerialServer.s"
@@ -420,12 +480,12 @@ help:
 	@echo "... Point.o"
 	@echo "... Point.i"
 	@echo "... Point.s"
-	@echo "... Searcher.o"
-	@echo "... Searcher.i"
-	@echo "... Searcher.s"
 	@echo "... SolverMatrix.o"
 	@echo "... SolverMatrix.i"
 	@echo "... SolverMatrix.s"
+	@echo "... TestMatrix.o"
+	@echo "... TestMatrix.i"
+	@echo "... TestMatrix.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
