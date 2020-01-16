@@ -18,7 +18,7 @@ private:
 public:
     State<T>(T s){
         this->state = s;
-        this->cost = 0;
+        this->cost = 0;https://stackoverflow.com/questions/20326356/how-to-remove-all-the-occurrences-of-a-char-in-c-string
         this->camefrom = nullptr;
         this->totalCost=-1;
         this->inOpenList=false;
@@ -45,7 +45,7 @@ public:
     };
 
     void setCameFrom(State<T>& s){
-        this->camefrom = s;
+        this->camefrom = &s;
     };
     double getCost(){
         return this->cost;

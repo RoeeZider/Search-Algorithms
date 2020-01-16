@@ -54,13 +54,13 @@ public:
     };
     //checks if a neighbor is in the matrix and the state is not with infinite cost.
     bool isValid(int i, int j) {
-        if ((i >= 0 && i < this->matrix.size()) && (j >= 0 && j < this->matrix[0].size()) {
-            if (this->matrix[i][j]->getCost() != INFINITY) {
+        if ((i >= 0 && i < this->matrix.size()) && (j >= 0 && j < this->matrix[0].size())) {
+            if (this->matrix[i][j]->getCost() != -1) {
                 return true;
             }
         }
         return false;
-    }
+    };
 
 };
 

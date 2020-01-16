@@ -4,20 +4,41 @@
 #include "CacheManager.h"
 #include "stringReverser.h"
 #include "MyTestClientHandler.h"
+#include "MyClientHandler.h"
+#include "Point.h"
+#include "Searcher.h"
+#include "SolverMatrix.h"
+#include "MyClientHandler.h"
+#include "AStar.h"
+#include "BestFirstSearch.h"
 
-using namespace std;
+namespace boot {
+    class Main{
+    public:
+        int main(int argc, char** argv){
+            int port;
+            // the port number is in argv[1]
+            if(argc > 1){
+                port = stoi(argv[1]);
+            } else{
+                // port number not found
+                return 0;
+            }
+            // the A* algorithm is the best!!!
+            Searcher<Point>* BFS = new BestFirstSearch<Point>();
+            SolverMatrix m(BFS);
+            MyClientHandler c(m);
+            MySerialServer server;
+            server.open(port,&c);
+            delete(BFS);
+            return 0;
+        }
+    };
+}
 
-
-
-int main() {
-
-
-
-    MySerialServer* s = new MySerialServer();
-    CacheManager<string, string>* fileCache= new FileCacheManager<string, string>();
-    Solver<string,string>* solver = new StringReverser();
-    ClientHandler *c  = new MyTestClientHandler(solver,fileCache);
-    s->open(12345, c);
-
+int main(int argc, char** argv) {
+    boot::Main m;
+    m.main(argc, argv);
+    return 0;
 }
 

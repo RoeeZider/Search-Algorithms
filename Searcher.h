@@ -10,12 +10,12 @@
 
 template<class T>
 class Searcher : ISearcher<T> {
-private:
+protected:
     int evaluateNodes;
-    PriorityQueue<T> openList;
+    PriorityQueue<T>* openList;
 public:
     Searcher() {
-        openList = new PriorityQueue<T>;
+        openList=new PriorityQueue<T>;
         this->evaluateNodes = 0;
     };
 
@@ -27,20 +27,20 @@ public:
 
     State<T> *popOpenList() {
         evaluateNodes++;
-        return openList.pop();
+        return openList->pop();
     };
 
     void addOpenList(State<T> &s) {
-        this->openList.push(s);
+        this->openList->push(s);
         s.setInOpenList();
     };
 
     bool OpenListIsEmpty() {
-        return openList.isEmpty();
+        return openList->isEmpty();
     };
 
     void updateOpenList(State<T> s) {
-        this->openList.update(s);
+        this->openList->update(s);
     };
 };
 

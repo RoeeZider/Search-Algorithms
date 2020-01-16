@@ -20,6 +20,7 @@ public:
     int getJ();
 
     bool operator==(Point other);
+    bool Equals(Point Other);
 
 };
 

@@ -15,7 +15,6 @@ private:
     vector<State<T>*> vec;
 public:
     PriorityQueue<T>(){
-        vec= nullptr;
     };
     State<T>* pop(){
         State<T>* temp=vec.front();
@@ -23,12 +22,12 @@ public:
         return temp;
     };
 
-    void push(State<T> & s){
+    void push(State<T> &s){
         auto it=vec.begin();
-        while (s.getTotalCost() < it->getToatalCost() && it!=vec.end()){
+        while (s.getTotalCost() < (*it)->getTotalCost() && it!=vec.end()){
             ++it;
         }
-        vec.insert(it,s);
+        vec.insert(it,&s);
     };
 
     bool isEmpty(){
@@ -36,11 +35,11 @@ public:
     };
     void update(State<T> s){
         auto it=vec.begin();
-        while (!it.Equels(s)){
+        while ((*it)->Equals(s)!=0){
             ++it;
         }
         this->vec.erase(it);
-        push(it);
+        push(**it);
     }
 
 };

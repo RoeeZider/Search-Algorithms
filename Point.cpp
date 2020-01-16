@@ -27,3 +27,9 @@ int Point::getJ() {
 bool Point::operator==(Point other) {
     return (this->getI() == other.getI() && this->getJ() == other.getJ());
 }
+bool Point::Equals(Point Other) {
+    if( *this==Other){
+        return -1;
+    }
+    return 0;
+}

@@ -12,7 +12,7 @@
 #include "SolverMatrix.h"
 
 
-class MyClientHandler: ClientHandler {
+class MyClientHandler: public ClientHandler {
 
     SolverMatrix solver;
     CacheManager<Matrix, string> *cache;
