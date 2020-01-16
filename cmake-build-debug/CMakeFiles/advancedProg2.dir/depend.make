@@ -35,6 +35,11 @@ CMakeFiles/advancedProg2.dir/Dfs.cpp.o: ../State.h
 
 CMakeFiles/advancedProg2.dir/FileCacheManager.cpp.o: ../FileCacheManager.cpp
 
+CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o: ../ClientHandler.h
+CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o: ../MyParallelServer.cpp
+CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o: ../MyParallelServer.h
+CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o: ../Server.h
+
 CMakeFiles/advancedProg2.dir/MySerialServer.cpp.o: ../ClientHandler.h
 CMakeFiles/advancedProg2.dir/MySerialServer.cpp.o: ../MySerialServer.cpp
 CMakeFiles/advancedProg2.dir/MySerialServer.cpp.o: ../MySerialServer.h
@@ -60,39 +65,13 @@ CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o: ../SolverMatrix.cpp
 CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o: ../SolverMatrix.h
 CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o: ../State.h
 
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../AStar.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../BestFirstSearch.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../BreadthFS.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../Dfs.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../ISearcher.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../Matrix.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../Point.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../PriorityQueue.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../Searchable.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../Searcher.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../State.h
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../TestMatrix.cpp
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../TestMatrix.h
-
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../AStar.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../BestFirstSearch.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../BreadthFS.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../CacheManager.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../ClientHandler.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../Dfs.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../FileCacheManager.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../ISearcher.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../Matrix.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../MySerialServer.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../MyTestClientHandler.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../Point.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../PriorityQueue.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../Searchable.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../Searcher.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../Server.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../Solver.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../State.h
-CMakeFiles/advancedProg2.dir/main.cpp.o: ../TestMatrix.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../main.cpp
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../stringReverser.h
 

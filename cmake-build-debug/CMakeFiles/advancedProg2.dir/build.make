@@ -200,18 +200,18 @@ CMakeFiles/advancedProg2.dir/BreadthFS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/BreadthFS.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roee/CLionProjects/mileStone-2/BreadthFS.cpp -o CMakeFiles/advancedProg2.dir/BreadthFS.cpp.s
 
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: CMakeFiles/advancedProg2.dir/flags.make
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o: ../TestMatrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roee/CLionProjects/mileStone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o -c /home/roee/CLionProjects/mileStone-2/TestMatrix.cpp
+CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o: CMakeFiles/advancedProg2.dir/flags.make
+CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o: ../MyParallelServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roee/CLionProjects/mileStone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o -c /home/roee/CLionProjects/mileStone-2/MyParallelServer.cpp
 
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/advancedProg2.dir/TestMatrix.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roee/CLionProjects/mileStone-2/TestMatrix.cpp > CMakeFiles/advancedProg2.dir/TestMatrix.cpp.i
+CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roee/CLionProjects/mileStone-2/MyParallelServer.cpp > CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.i
 
-CMakeFiles/advancedProg2.dir/TestMatrix.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/TestMatrix.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roee/CLionProjects/mileStone-2/TestMatrix.cpp -o CMakeFiles/advancedProg2.dir/TestMatrix.cpp.s
+CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roee/CLionProjects/mileStone-2/MyParallelServer.cpp -o CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.s
 
 # Object files for target advancedProg2
 advancedProg2_OBJECTS = \
@@ -226,7 +226,7 @@ advancedProg2_OBJECTS = \
 "CMakeFiles/advancedProg2.dir/Dfs.cpp.o" \
 "CMakeFiles/advancedProg2.dir/AStar.cpp.o" \
 "CMakeFiles/advancedProg2.dir/BreadthFS.cpp.o" \
-"CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o"
+"CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o"
 
 # External object files for target advancedProg2
 advancedProg2_EXTERNAL_OBJECTS =
@@ -242,7 +242,7 @@ advancedProg2: CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/Dfs.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/AStar.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/BreadthFS.cpp.o
-advancedProg2: CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o
+advancedProg2: CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o
 advancedProg2: CMakeFiles/advancedProg2.dir/build.make
 advancedProg2: CMakeFiles/advancedProg2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/roee/CLionProjects/mileStone-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable advancedProg2"

@@ -129,6 +129,12 @@
 		<Unit filename="/home/roee/CLionProjects/mileStone-2/MyClientHandler.h">
 			<Option target="advancedProg2"/>
 		</Unit>
+		<Unit filename="/home/roee/CLionProjects/mileStone-2/MyParallelServer.cpp">
+			<Option target="advancedProg2"/>
+		</Unit>
+		<Unit filename="/home/roee/CLionProjects/mileStone-2/MyParallelServer.h">
+			<Option target="advancedProg2"/>
+		</Unit>
 		<Unit filename="/home/roee/CLionProjects/mileStone-2/MySerialServer.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
@@ -169,12 +175,6 @@
 			<Option target="advancedProg2"/>
 		</Unit>
 		<Unit filename="/home/roee/CLionProjects/mileStone-2/State.h">
-			<Option target="advancedProg2"/>
-		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/TestMatrix.cpp">
-			<Option target="advancedProg2"/>
-		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/TestMatrix.h">
 			<Option target="advancedProg2"/>
 		</Unit>
 		<Unit filename="/home/roee/CLionProjects/mileStone-2/main.cpp">

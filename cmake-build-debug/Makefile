@@ -258,6 +258,33 @@ FileCacheManager.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/FileCacheManager.cpp.s
 .PHONY : FileCacheManager.cpp.s
 
+MyParallelServer.o: MyParallelServer.cpp.o
+
+.PHONY : MyParallelServer.o
+
+# target to build an object file
+MyParallelServer.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o
+.PHONY : MyParallelServer.cpp.o
+
+MyParallelServer.i: MyParallelServer.cpp.i
+
+.PHONY : MyParallelServer.i
+
+# target to preprocess a source file
+MyParallelServer.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.i
+.PHONY : MyParallelServer.cpp.i
+
+MyParallelServer.s: MyParallelServer.cpp.s
+
+.PHONY : MyParallelServer.s
+
+# target to generate assembly for a file
+MyParallelServer.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.s
+.PHONY : MyParallelServer.cpp.s
+
 MySerialServer.o: MySerialServer.cpp.o
 
 .PHONY : MySerialServer.o
@@ -366,33 +393,6 @@ SolverMatrix.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.s
 .PHONY : SolverMatrix.cpp.s
 
-TestMatrix.o: TestMatrix.cpp.o
-
-.PHONY : TestMatrix.o
-
-# target to build an object file
-TestMatrix.cpp.o:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/TestMatrix.cpp.o
-.PHONY : TestMatrix.cpp.o
-
-TestMatrix.i: TestMatrix.cpp.i
-
-.PHONY : TestMatrix.i
-
-# target to preprocess a source file
-TestMatrix.cpp.i:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/TestMatrix.cpp.i
-.PHONY : TestMatrix.cpp.i
-
-TestMatrix.s: TestMatrix.cpp.s
-
-.PHONY : TestMatrix.s
-
-# target to generate assembly for a file
-TestMatrix.cpp.s:
-	$(MAKE) -f CMakeFiles/advancedProg2.dir/build.make CMakeFiles/advancedProg2.dir/TestMatrix.cpp.s
-.PHONY : TestMatrix.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -471,6 +471,9 @@ help:
 	@echo "... FileCacheManager.o"
 	@echo "... FileCacheManager.i"
 	@echo "... FileCacheManager.s"
+	@echo "... MyParallelServer.o"
+	@echo "... MyParallelServer.i"
+	@echo "... MyParallelServer.s"
 	@echo "... MySerialServer.o"
 	@echo "... MySerialServer.i"
 	@echo "... MySerialServer.s"
@@ -483,9 +486,6 @@ help:
 	@echo "... SolverMatrix.o"
 	@echo "... SolverMatrix.i"
 	@echo "... SolverMatrix.s"
-	@echo "... TestMatrix.o"
-	@echo "... TestMatrix.i"
-	@echo "... TestMatrix.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
