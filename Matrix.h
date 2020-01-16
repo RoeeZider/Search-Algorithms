@@ -9,7 +9,7 @@
 #include "Searchable.h"
 #include "Point.h"
 
-class Matrix : Searchable<Point> {
+class Matrix : public Searchable<Point> {
 private:
     State<Point> *initState;
     State<Point> *goalState;

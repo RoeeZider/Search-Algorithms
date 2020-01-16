@@ -8,185 +8,185 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/roee/CLionProjects/mileStone-2/cmake-build-debug"/>
+				<Option working_dir="/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/roee/CLionProjects/mileStone-2/cmake-build-debug"/>
+				<Option working_dir="/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="advancedProg2">
-				<Option output="/home/roee/CLionProjects/mileStone-2/cmake-build-debug/advancedProg2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/roee/CLionProjects/mileStone-2/cmake-build-debug"/>
+				<Option output="/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/advancedProg2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 advancedProg2"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 advancedProg2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="advancedProg2/fast">
-				<Option output="/home/roee/CLionProjects/mileStone-2/cmake-build-debug/advancedProg2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/roee/CLionProjects/mileStone-2/cmake-build-debug"/>
+				<Option output="/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/advancedProg2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 advancedProg2/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 advancedProg2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/roee/CLionProjects/mileStone-2/cmake-build-debug"/>
+				<Option working_dir="/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/roee/CLionProjects/mileStone-2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/AStar.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/AStar.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/AStar.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/AStar.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/BestFirstSearch.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/BestFirstSearch.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/BestFirstSearch.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/BestFirstSearch.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/BreadthFS.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/BreadthFS.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/BreadthFS.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/BreadthFS.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/CacheManager.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/CacheManager.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/ClientHandler.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/ClientHandler.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/Dfs.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Dfs.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/Dfs.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Dfs.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/FileCacheManager.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/FileCacheManager.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/FileCacheManager.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/FileCacheManager.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/ISearcher.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/ISearcher.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/Matrix.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Matrix.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/MyClientHandler.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MyClientHandler.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/MyParallelServer.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MyParallelServer.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/MyParallelServer.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MyParallelServer.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/MySerialServer.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MySerialServer.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/MySerialServer.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MySerialServer.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/MyTestClientHandler.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MyTestClientHandler.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/MyTestClientHandler.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/MyTestClientHandler.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/Point.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Point.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/Point.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Point.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/PriorityQueue.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/PriorityQueue.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/Searchable.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Searchable.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/Searcher.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Searcher.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/Server.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Server.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/Solver.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/Solver.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/SolverMatrix.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/SolverMatrix.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/SolverMatrix.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/SolverMatrix.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/State.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/State.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/main.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/main.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/stringReverser.cpp">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/stringReverser.cpp">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/stringReverser.h">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/stringReverser.h">
 			<Option target="advancedProg2"/>
 		</Unit>
-		<Unit filename="/home/roee/CLionProjects/mileStone-2/CMakeLists.txt">
+		<Unit filename="/home/harelfeldman/CLionProjects/advancedProg2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

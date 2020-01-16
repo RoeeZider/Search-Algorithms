@@ -24,6 +24,14 @@ public:
         this->inOpenList=false;
         this->totalCost=0;
     };
+    State<T>(T s,double costa){
+        this->state = s;
+        this->cost = costa;
+        this->camefrom = nullptr;
+        this->totalCost=-1;
+        this->inOpenList=false;
+        this->totalCost=0;
+    };
 
     bool Equals(State<T> s){
         return state.Equals(s.state);

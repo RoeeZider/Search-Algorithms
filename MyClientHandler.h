@@ -8,14 +8,18 @@
 #include "ClientHandler.h"
 #include "Solver.h"
 #include "CacheManager.h"
+#include "Matrix.h"
+#include "SolverMatrix.h"
 
-class MyClientHandler {
 
-    template<class P, class S>
-    Solver<P, S> solver;
-    CacheManager<P, S> *cm;
+class MyClientHandler: ClientHandler {
+
+    SolverMatrix solver;
+    CacheManager<Matrix, string> *cache;
+    string data;
 
 public:
+    MyClientHandler(SolverMatrix solver);
     void handleClient(int socket);
 };
 

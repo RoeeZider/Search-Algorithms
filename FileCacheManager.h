@@ -28,7 +28,6 @@ public:
 };
 
 
-
 template<class P, class S>
 bool FileCacheManager<P, S>::IsSolutionExist(P problem) {
     //check if the problem exist in files
