@@ -68,14 +68,14 @@ void MyClientHandler::handleClient(int socket) {
  */
 string MyClientHandler::getSolution(Matrix matrix) {
 
-    // if the problem is already exists
- //   if (this->cm->IsSolutionExist(matrix)) {
-   //     return this->cm->getSolution(matrix);
-    //}
+   //  if the problem is already exists
+   if (this->cm->isSolved(matrix)) {
+       return this->cm->getSolution(matrix);
+    }
     // solve the problem
     string solution = this->solver.solve(&matrix);
-    // save the problem and its solution
-  //  this->cm->saveSolution(solution,matrix);
+  //   save the problem and its solution
+    this->cm->saveSolution(matrix,solution);
     return solution;
 }
 

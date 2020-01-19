@@ -31,8 +31,8 @@ namespace boot {
             //FileCacheManager<std::string, std::string> *cache = new FileCacheManager<std::string,std::string>();
             CacheManager<string, string> *fileCache = new FileCacheManager();
             MyClientHandler c(m, fileCache);
-            server_side::MyParallelServer server;
-           server.open(port,c);
+            auto *server=new MyParallelServer();
+           server->open(port,&c);
             delete(aStarAlgo);
             return 0;
         }

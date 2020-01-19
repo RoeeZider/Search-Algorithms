@@ -5,29 +5,26 @@
 #ifndef ADVANCEDPROG2_MYPARALLELSERVER_H
 #define ADVANCEDPROG2_MYPARALLELSERVER_H
 
-#include <queue>
+
+#include <vector>
 #include <thread>
 #include "Server.h"
-using namespace std;
-namespace server_side {
-    class MyParallelServer : public Server {
 
-    private:
-        int serverSocket;
+class MyParallelServer{
+    vector<thread> m_threads;
+    ClientHandler* m_handler;
 
-        void start(int serverSocket, ClientHandler &c);
+private:
+    static void clientHandlerObjectFunctionAdapter(ClientHandler* ch, int sockfd);
 
-    public:
-        queue<thread> threads_queue;
+public:
+    MyParallelServer();
+    virtual ~MyParallelServer();
 
-        MyParallelServer();
+    virtual void open(int port, ClientHandler* ch);
+    virtual void stop(int sockfd);
 
-        void stop() override;
 
-        void handle(int clientSocket, ClientHandler &c);
-
-        void open(int port, ClientHandler &c);
-    };
-}
+};
 
 #endif //ADVANCEDPROG2_MYPARALLELSERVER_H

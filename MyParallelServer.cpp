@@ -2,128 +2,77 @@
 // Created by roee on 16/01/2020.
 //
 
-#include "MyParallelServer.h"
+#include <sys/socket.h>
 #include <netinet/in.h>
-#include <cstdio>
-#include <cstdlib>
-#include <memory.h>
-#include <unistd.h>
-#include <cerrno>
-#include <thread>
 #include <iostream>
-#define BUFFER_SIZE 1024
-#define CLIENTS 5
-#define SEC 1
+#include <cstring>
+#include <unistd.h>
+#include "MyParallelServer.h"
 
-using namespace std;
-using namespace std::chrono;
-using namespace std::chrono::_V2;
+MyParallelServer::MyParallelServer() {}
 
-/*
- * this method open the communication with the client on the port its got  and listen to the client by the way its got
- */
-void server_side::MyParallelServer::open(int port, ClientHandler &c) {
-
-    int serverSocket;
-    //initialize the sockets variables
-    struct sockaddr_in serv_addr;
-
-    //First call to socket() function
-    serverSocket = socket(AF_INET, SOCK_STREAM, 0);
-
-    if (serverSocket < 0) {
-        perror("ERROR opening socket");
-        exit(1);
+MyParallelServer::~MyParallelServer() {
+    // Waiting for all the threads to finish
+    for (int i = 0; i < m_threads.size(); i++) {
+        m_threads.at(i).join();
     }
+}
 
-    // Initialize socket structure
+void MyParallelServer::open(int port, ClientHandler *ch) {
+    int sockfd, newsockfd;
+    struct sockaddr_in serv_addr{}, client_addr{};
+    // Create socket
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd < 0) {
+        cerr << "Error opening socket" << endl;
+        cout << strerror(errno);
+        exit(-1);
+    }
+    // Bind IP_address to socket
     bzero((char *) &serv_addr, sizeof(serv_addr));
-
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = INADDR_ANY;
     serv_addr.sin_port = htons(port);
-
-
-    int n = 1;
-    setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &n, sizeof(int));
-    /* Now bind the host address using bind() call.*/
-    if (bind(serverSocket, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
-        perror("ERROR on binding");
-        exit(1);
+    if (bind(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
+        cerr << "Error binding to address" << endl;
+        cout << strerror(errno) << endl;
+        this->stop(sockfd);
+        exit(-2);
     }
-
-    /* Now start listening for the clients, here process will
-    * go in sleep mode and will wait for the incoming connection
-    */
-
-    listen(serverSocket, CLIENTS);
-    this->serverSocket = serverSocket;
-    start(serverSocket,c);
-}
-/*
- * this method close the opening socket at the end of the program
- */
-void server_side::MyParallelServer::stop() {
-    if (this->serverSocket != -1){
-        close(this->serverSocket);
-    }
-    while (!threads_queue.empty())  {
-        threads_queue.front().join();
-        threads_queue.pop();
-    }
-
-}
-
-/*
- * this method get the socket and the way to handle with the client
- * and start to accept the massages from the client
- */
-void server_side::MyParallelServer::start(int serverSocket, ClientHandler &c) {
-    int newsockfd, clilen;
+    // Listen for connections until a certain amount of time
+    listen(sockfd, SOMAXCONN);
     struct sockaddr_in cli_addr;
+    int clilen;
     clilen = sizeof(cli_addr);
-    timeval timeout;
-    timeout.tv_usec = 0;
+    struct timeval tv;
+    tv.tv_sec = 120;
+    tv.tv_usec = 0;
+    setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof tv);
     while (true) {
-        /* Accept actual connection from the client */
-        timeout.tv_sec = 0;
-        newsockfd = accept(serverSocket, (struct sockaddr *) &cli_addr, (socklen_t *) &clilen);
-
+        newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, (socklen_t *) &clilen);
         if (newsockfd < 0) {
-            if (errno == EAGAIN || errno == EWOULDBLOCK)    {
+            if (errno == EWOULDBLOCK) {
+                cout << "timeout!" << endl;
                 break;
             }
-            perror("ERROR on accept");
-            exit(1);
+            else {
+                cerr << "Error accepting connection" << endl;
+                cout << strerror(errno);
+                break;
+            }
         }
-
-        if (setsockopt(newsockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout, sizeof(timeout)) < 0)   {
-            perror("error on set timeout");
-            exit(1);
-        }
-
-
-        handle(newsockfd,c);
-        timeout.tv_sec = SEC;
-
-        if (setsockopt(serverSocket, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout, sizeof(timeout)) < 0)   {
-            perror("error on set timeout");
-            exit(1);
-        }
-
+        m_threads.emplace_back(thread(clientHandlerObjectFunctionAdapter, ch, newsockfd));
     }
+    this->stop(sockfd);
+    if (newsockfd != -1) {
+        this->stop(newsockfd);
+    }
+}
 
-    stop();
+void MyParallelServer::stop(int sockfd) {
+    close(sockfd);
 }
-/*
- * the constructor of general server
- */
-server_side::MyParallelServer::MyParallelServer() {
-    this->serverSocket = -1;
-}
-static void handleClient(int clientSocket,  ClientHandler* c){
-    c->handleClient(clientSocket);
-}
-void server_side::MyParallelServer::handle(int clientSocket, ClientHandler &c) {
-    threads_queue.push(thread(handleClient, clientSocket, &c));
+
+void MyParallelServer::clientHandlerObjectFunctionAdapter(ClientHandler *ch, int sockfd) {
+    ch->handleClient(sockfd);
 }
