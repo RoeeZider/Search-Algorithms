@@ -5,119 +5,91 @@
 #ifndef ADVANCEDPROG2_FILECACHEMANAGER_H
 #define ADVANCEDPROG2_FILECACHEMANAGER_H
 
-#include "CacheManager.h"
-#include <map>
+#include <unordered_map>
 #include <fstream>
 #include <mutex>
+#include "CacheManager.h"
 
-#define DELIMITER  '$'
+using namespace std;
 
-using  namespace std;
 
-/*
- * thus class represent a manager that responsible on a file cache
- * its have the ability to check is some problem and her solution are found in the
- * file already and return the answer or to write a new problem and solution in the file
- */
-template <class P, class S>
-class FileCacheManager : public CacheManager<P,S>{
-    map<string,string> pAndS;
-    string fileName;
-    mutable mutex m;
+class FileCacheManager : public CacheManager<string, string> {
+    // <problem, solution>
+    unordered_map<string, string> map;
+    hash<string> hasher;
+    mutex mutex_;
 
 public:
-    /*
-     * constructor of fileCacheManager
-     */
-    FileCacheManager(string fileName){
-        this->fileName = fileName;
-        loadFromFile();
-    };
 
-    /*
-     * this method check if some problem exist in the file
-     * return true if the problem exists false otherwise
-     */
-    bool IsSolutionExist(P problem) override{
-        unique_lock<mutex> ul(m);
-        bool result = this->pAndS.find(problem) != pAndS.end();
-        ul.unlock();
-        return result;
-    };
+    virtual bool isSolved(string problem) {
+        //mutex_.lock();
+        if (exist(problem)) {
+            //mutex_.unlock();
 
-    /*
-     * this method return from the file the solution as string
-     */
-    string getSolution(P problem) override {
-        if(isSolutionExist(problem)){
-            unique_lock<mutex> ul(m);
-            string str = this->pAndS.at((string)problem);
-            ul.unlock();
-            return str;
+            return true;
         }
-        perror("The solution of this problem not found");
-        string s;
-        return s;
-    };
+        return false;
+    }
 
-    /*
-     * this save the problem and her solution to the file,if hey are ot exist
-     */
-    void saveSolution(P problem, S solution) override{
-        if (!isSolutionExist(problem)){
-            unique_lock<mutex> ul(m);
-            this->pAndS.insert(make_pair(problem,solution));
-            ul.unlock();
-            saveToFile(problem, solution);
+    virtual string getSolution(string problem) {
+        //mutex_.lock();
+        // if the key doesn't exist
+        if (!exist(problem)) {
+            throw "Error: The key doesn't existing";
         }
-    };
+        // read object from file
+        string solution = this->readObj(problem);
+        //mutex_.unlock();
 
+        return solution;
+    }
 
-    /*
-    * this method write to the file the problem and the solution with a separator $ between them
-    */
-    void saveToFile(P problem, S solution){
-        ofstream outFile;
-        outFile.open(this->fileName, ios::out | ios::app | ios::ate);
-        if (!outFile.is_open()){
-            perror("error opening file");
-            exit(1);
+    virtual void saveSolution(string problem, string &solution) {
+        // will always be string
+        //mutex_.lock();
+        size_t hash = hasher(problem);
+        ofstream outFile(to_string(hash));
+        if (!outFile) {
+            throw "File create error";
         }
-        unique_lock<mutex> ul(m);
-        outFile << (string)problem << DELIMITER << (string)solution << endl;
-        ul.unlock();
+        outFile << solution;
         outFile.close();
-    };
+        map[problem] = hash;
+        //mutex_.unlock();
+    }
 
-    /*
-     * this method load the information of the problem and the solution from the file to the map in the program
-     */
-    void loadFromFile(){
-        ifstream inFile;
-        inFile.open(this->fileName);
-
-        //problem with opening the file
-        if (inFile.bad()){
-            perror("error opening file");
-            exit(1);
+    string readObj(string problem) {
+        //mutex_.lock();
+        string solution = "";
+        size_t hash = hasher(problem);
+        ifstream inFile(to_string(hash));
+        if (!inFile) {
+            throw "Can't open file";
         }
-
-        //run over the lines in the file
-        unique_lock<mutex> ul(m);
-        for(string line; getline(inFile, line);){
-
-            unsigned long splitIndex = line.find(DELIMITER);
-            string problem = line.substr(0, splitIndex);
-            string solution = line.substr(splitIndex+1, line.size() - problem.size() -1);
-            this->pAndS.insert(make_pair(problem, solution));
-
+        string line;
+        // read solution
+        while (inFile >> line) {
+            solution += line;
         }
-        ul.unlock();
         inFile.close();
-    };
+        //mutex_.unlock();
+        return solution;
 
-    ~FileCacheManager() override = default;
+    }
 
+
+    inline bool exist(const std::string &name) {
+        if (this->map.find(name) != this->map.end()) {
+            return true;
+        }
+        size_t hash = hasher(name);
+        ifstream file(to_string(hash));
+        if (!file) {         // If the file was not found, then file is 0, i.e. !file=1 or true.
+            return false;    // The file was not found.
+        } else {             // If the file was found, then file is non-0.
+            return true;     // The file was found.
+        }
+    }
 
 };
 /*

@@ -4,18 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/harelfeldman/CLionProjects/advancedProg2/AStar.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/AStar.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/BestFirstSearch.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/BreadthFS.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/BreadthFS.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/Dfs.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/Dfs.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/FileCacheManager.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/FileCacheManager.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/MyParallelServer.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/MySerialServer.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/MySerialServer.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/MyTestClientHandler.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/MyTestClientHandler.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/Point.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/Point.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/SolverMatrix.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/main.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/main.cpp.o"
-  "/home/harelfeldman/CLionProjects/advancedProg2/stringReverser.cpp" "/home/harelfeldman/CLionProjects/advancedProg2/cmake-build-debug/CMakeFiles/advancedProg2.dir/stringReverser.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/AStar.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/AStar.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/BestFirstSearch.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/BestFirstSearch.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/BreadthFS.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/BreadthFS.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/Dfs.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/Dfs.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/FileCacheManager.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/FileCacheManager.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/MyParallelServer.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/MyParallelServer.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/MySerialServer.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/MySerialServer.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/MyTestClientHandler.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/MyTestClientHandler.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/Point.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/Point.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/SolverMatrix.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/main.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/main.cpp.o"
+  "/home/roee/CLionProjects/advancedProg2222/stringReverser.cpp" "/home/roee/CLionProjects/advancedProg2222/cmake-build-debug/CMakeFiles/advancedProg2.dir/stringReverser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

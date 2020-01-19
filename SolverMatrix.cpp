@@ -2,6 +2,7 @@
 // Created by harelfeldman on 1/14/20.
 //
 
+#include <iostream>
 #include "Point.h"
 #include "SolverMatrix.h"
 
@@ -63,6 +64,7 @@ SolverMatrix::SolverMatrix(ISearcher<Point> *searcher) {
  */
 string SolverMatrix::solve(Searchable<Point> *problem) {
     vector<State<Point> *> solution = this->searcher->search(problem);
+    cout<<"path cost: " << solution[solution.size()-1]->getTotalCost()<<endl;
     return getPath(solution);
 }
 

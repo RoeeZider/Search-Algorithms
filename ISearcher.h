@@ -14,7 +14,6 @@ public:
     virtual vector<State<T>*> search(Searchable<T> *searchable) = 0;
     virtual int getNumberOfNodesEvaluated()=0;
     virtual int getTotalCostPath()=0;
-    virtual ~ISearcher()=0;
 };
 
 #endif //ADVANCEDPROG2_ISEARCHER_H

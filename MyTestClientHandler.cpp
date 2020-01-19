@@ -31,7 +31,7 @@ void MyTestClientHandler:: handleClient(int server_socket) {
         //write the massage into file
         cout << "buffer : " << buffer << endl;
         string solution;
-        if (cache->IsSolutionExist(problem)) {
+        if (cache->isSolved(problem)) {
             solution = cache->getSolution(problem);
             cout << "from file: " << solution << endl;
         } else {

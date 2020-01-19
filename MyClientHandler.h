@@ -24,7 +24,7 @@ class MyClientHandler : public ClientHandler{
 
     string getSolution(Matrix matrix);
 public:
-    MyClientHandler(SolverMatrix solver);
+    MyClientHandler(SolverMatrix solver,CacheManager<string, string> *cache);
     void handleClient(int socket) override;
     Matrix* lexer(string str);
     vector<string> split (const string &str,char delimiter);
@@ -35,8 +35,8 @@ public:
 };
 
 // constructor
-MyClientHandler::MyClientHandler(SolverMatrix solver) : solver(solver) {
-   // this->cm = &cacheManager;
+MyClientHandler::MyClientHandler(SolverMatrix solver,CacheManager<string, string> *cache) : solver(solver) {
+    this->cm = cache;
 }
 
 /**
@@ -49,6 +49,7 @@ void MyClientHandler::handleClient(int socket) {
     Matrix *matrix = this->lexer(str);
     // write the solution
     writeToSocket(socket, getSolution(*matrix) + "\n");
+
     close(socket);
     vector<vector<State<Point> *>> mat = matrix->getMatrix();
     for (int i = 0; i < matrix->getRows(); i++) {
@@ -68,13 +69,13 @@ void MyClientHandler::handleClient(int socket) {
 string MyClientHandler::getSolution(Matrix matrix) {
 
     // if the problem is already exists
-    if (this->cm->IsSolutionExist(matrix)) {
-        return this->cm->getSolution(matrix);
-    }
+ //   if (this->cm->IsSolutionExist(matrix)) {
+   //     return this->cm->getSolution(matrix);
+    //}
     // solve the problem
     string solution = this->solver.solve(&matrix);
     // save the problem and its solution
-    this->cm->saveSolution(solution,matrix);
+  //  this->cm->saveSolution(solution,matrix);
     return solution;
 }
 

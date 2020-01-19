@@ -26,10 +26,11 @@ namespace boot {
                 return 0;
             }
             // the A* algorithm is the best!!!
-            Searcher<Point>* aStarAlgo = new AStar<Point>();
+            ISearcher<Point>* aStarAlgo = new AStar<Point>();
             SolverMatrix m(aStarAlgo);
             //FileCacheManager<std::string, std::string> *cache = new FileCacheManager<std::string,std::string>();
-            MyClientHandler c(m);
+            CacheManager<string, string> *fileCache = new FileCacheManager();
+            MyClientHandler c(m, fileCache);
             server_side::MyParallelServer server;
            server.open(port,c);
             delete(aStarAlgo);
