@@ -6,7 +6,7 @@
 #define ADVANCEDPROG2_BREADTHFS_H
 
 #include "Searcher.h"
-
+#include <queue>
 using namespace std;
 
 /*

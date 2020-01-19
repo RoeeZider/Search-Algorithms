@@ -7,11 +7,12 @@
 #include "MyClientHandler.h"
 #include "Point.h"
 #include "Searcher.h"
+#include "ISearcher.h"
 #include "SolverMatrix.h"
-#include "MyClientHandler.h"
-#include "AStar.h"
 #include "BestFirstSearch.h"
-
+#include "AStar.h"
+#include "MyParallelServer.h"
+using namespace std;
 namespace boot {
     class Main{
     public:
@@ -25,12 +26,13 @@ namespace boot {
                 return 0;
             }
             // the A* algorithm is the best!!!
-            Searcher<Point>* BFS = new BestFirstSearch<Point>();
-            SolverMatrix m(BFS);
+            Searcher<Point>* aStarAlgo = new AStar<Point>();
+            SolverMatrix m(aStarAlgo);
+            //FileCacheManager<std::string, std::string> *cache = new FileCacheManager<std::string,std::string>();
             MyClientHandler c(m);
-            MySerialServer server;
-            server.open(port,&c);
-            delete(BFS);
+            server_side::MyParallelServer server;
+           server.open(port,c);
+            delete(aStarAlgo);
             return 0;
         }
     };

@@ -10,9 +10,9 @@
 #include "State.h"
 #include "Point.h"
 #include <string>
-#include "Searcher.h"
+#include "ISearcher.h"
 #include "Solver.h"
-
+/*
 using namespace std;
 
 class SolverMatrix : public Solver<Searchable<Point>*, string>{
@@ -27,6 +27,22 @@ private:
     string getDirection(Point cur, Point next);
 };
 
+*/
 
+using namespace std;
+/**
+ * this class solve a matrix problem
+ */
+class SolverMatrix : public Solver<Searchable<Point>*, string>{
+    ISearcher<Point>* searcher;
+
+public:
+    SolverMatrix(ISearcher<Point>* searcher);
+    string solve(Searchable<Point> *problem) override;
+    string getPath(vector<State<Point>*> States);
+
+private:
+    string getDirection(Point cur, Point next);
+};
 
 #endif //ADVANCEDPROG2_SOLVERMATRIX_H

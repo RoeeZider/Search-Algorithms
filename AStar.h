@@ -1,10 +1,11 @@
 //
 // Created by roee on 15/01/2020.
 //
-/*
+
 #ifndef ADVANCEDPROG2_ASTAR_H
 #define ADVANCEDPROG2_ASTAR_H
 
+#include <queue>
 #include "Searcher.h"
 
 #define INF -1
@@ -33,7 +34,7 @@ public:
     /*
     * this method reality the A* algorithm
     */
-/*
+
     vector<State<Node>*> search(Searchable<Node> *searchable) override{
         this->initialization();
         // init state
@@ -88,7 +89,7 @@ public:
     * @param curQueue
     * @return new priority queue
     */
-/*
+
     priority_queue<State<Node>*, vector<State<Node>*>, StateComparator> updatePriorityOrder
     (priority_queue<State<Node>*, vector<State<Node>*>, StateComparator> curQueue){
         priority_queue<State<Node>*, vector<State<Node>*>, StateComparator> newQueue;
@@ -105,4 +106,3 @@ public:
 
 
 #endif //ADVANCEDPROG2_ASTAR_H
-*/

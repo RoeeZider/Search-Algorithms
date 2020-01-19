@@ -1,7 +1,7 @@
 //
 // Created by harelfeldman on 1/15/20.
 //
-
+/*
 #include <unistd.h>
 #include <algorithm>
 #include "MyClientHandler.h"
@@ -9,84 +9,161 @@
 
 using namespace std;
 
-MyClientHandler::MyClientHandler(SolverMatrix solver) : solver(solver) {
-    this->cache = new FileCacheManager<Matrix, string>(matrix_test.txt);
+
+// constructor
+MyClientHandler::MyClientHandler(MatrixSolver solver, CacheManager<string,string> cacheManager) : solver(solver) {
+    this->cm = cacheManager;
 }
 
+/**
+ * this function handle the client with reading the problem and returning the solution for the problem.
+ * @param socket client socket
+ */
+/*
 void MyClientHandler::handleClient(int socket) {
+    //read the problem
+    string str = readFromSocket(socket, "end\n");
+    Matrix *matrix = this->lexer(str);
+    // write the solution
+    writeToSocket(socket, getSolution(*matrix) + "\n");
+    close(socket);
+    vector<vector<State<Point> *>> mat = matrix->getMatrix();
+    for (int i = 0; i < matrix->getRows(); i++) {
+        for (int j = 0; j < matrix->getCols(); j++) {
+            delete (mat[i][j]);
+        }
+    }
+    delete (matrix);
+}
+
+/**
+ * this function get a matrix and return the solution for this matrix.
+ * if the problem is already exists, the function will return the solution from the cache manager.
+ * @param matrix the matrix
+ * @return string that represent the solution
+ *
+string MyClientHandler::getSolution(Matrix matrix) {
+
+    // if the problem is already exists
+    if (this->cm->IsSolutionExist(matrix)) {
+        return this->cm->getSolution(matrix);
+    }
+    // solve the problem
+    string solution = this->solver.solve(&matrix);
+    // save the problem and its solution
+    this->cm->saveSolution(matrix, solution);
+    return solution;
+}
+
+/**
+ * the function takes the string , split it, and made a matrix from it.
+ * @param str string to made the matrix
+ * @return matrix
+ *
+Matrix *MyClientHandler::lexer(string str) {
+    vector<string> splitStr = split(str, '\n');
+    unsigned long vecSize = splitStr.size();
+    // take the init point and goal point
+    vector<string> initIndex = split(splitStr[vecSize - 2], ',');
+    vector<string> goalIndex = split(splitStr[vecSize - 1], ',');
+
+    Point init(stoi(initIndex[0]), stoi(initIndex[1]));
+    Point goal(stoi(goalIndex[0]), stoi(goalIndex[1]));
+
     vector<vector<State<Point> *>> matrix;
-    Point init;
-    Point goal;
-    vector<State<Point> *> rowVec;
-    while (true) {
-        char buffer[4096] = {0};
-        //receive massage
-        int valRead = read(socket, buffer, 1500);
-        if (valRead == 0) {
-            break;
+    // for each cell, made a state with the same i,j and the value in this place that represent the cost.
+    for (int i = 0; i < vecSize - 2; i++) {
+        vector<string> values = split(splitStr[i], ',');
+        vector<State<Point> *> row;
+        for (int j = 0; j < values.size(); j++) {
+            row.push_back(new State<Point>(Point(i, j), stoi(values[j])));
         }
-        int i = 0;
-        int j = 0;
-        string rowStr = string(buffer);
-        while (rowStr.compare("end\n") != 0) {
-            int pos = rowStr.find('\n');
-            //rowStr is a row
-            rowStr = rowStr.substr(0, pos);
-            //remove spaces
-            rowStr.erase(std::remove(rowStr.begin(), rowStr.end(), ' '), rowStr.end());
-            int p = rowStr.find(',');
-            int c = min(p, pos);
-            //p is the position of ",' and pos the position of the end of rowStr
-            while (p < pos && p > -1) {
-                //num is number in rowStr
-                string num = rowStr.substr(0, c);
-                double cost = stod(num);
-                //create Point and State from current num location in row and the number of the row
-                Point temp = Point(i, j);
-                State<Point> st = State<Point>(temp, cost);
-                //push to vector
-                rowVec.push_back(&st);
-                //erase the number to get the next one
-                rowStr.erase(0, c);
-                //get the next number
-                p = rowStr.find(',');
-                c = min(p, pos);
-                j++;
-            }
-            j = 0;
-            i++;
-            rowStr = string(buffer);
-            matrix.push_back(rowVec);
-            rowVec.clear();
-        }
-        //get the init and goal points from matrix
-        int initI = matrix[i - 2][0]->getCost();
-        int initJ = matrix[i - 2][1]->getCost();
-        int goalI = matrix[i - 1][0]->getCost();
-        int goalJ = matrix[i - 1][1]->getCost();
-        init = Point(initI, initJ);
-        goal = Point(goalI, goalJ);
-        //erase this two vectors
-        matrix.erase(matrix.end() - 1);
+        matrix.push_back(row);
+    }
+    return new Matrix(matrix, init, goal);
+}
 
-        //create searchable matrix
-        Matrix *MyMatrix = new Matrix(matrix, init, goal);
-        string messege;
-        // if the problem is already exists
-        if (this->cache->IsSolutionExist(*MyMatrix)) {
-            messege = this->cache->getSolution(*MyMatrix);
+/**
+ * this function takes a string and each section between the delimiter put in the vector.
+ * @param str  a string
+ * @param delimiter the char to split
+ * @return the splited string in a vector
+ *
+vector<string> MyClientHandler::split(const string &str, char delimiter) {
+    vector<string> tokens;
+    string token;
+
+    for (unsigned long i = 0; i < str.length(); i++) {
+        // skip on spaces
+        if (str.at(i) == ' ') {
+            continue;
+        }
+
+        if (str.at(i) != delimiter) {
+            token += str.at(i);
         } else {
-            //send the problem to solvermatrix
-            messege = this->solver.solve(MyMatrix)+"\n";
+            tokens.push_back(token);
+            token = "";
         }
-        strcpy(buffer,messege.c_str());
-        valRead=write(socket,buffer,strlen(buffer));
-
-        if (valRead < 0) {
-            perror("ERROR writing to socket");
-            exit(1);
-        }
-        close(socket);
+    }
+    if (!token.empty()) {
+        tokens.push_back(token);
     }
 
+    return tokens;
 }
+
+MyClientHandler::~MyClientHandler() {
+    delete this->cm;
+}
+
+void MyClientHandler::writeToSocket(int socket, string data) {
+    int n;
+    char buffer[BUFFER_SIZE];
+    bzero(buffer, BUFFER_SIZE);
+    strcpy(buffer, data.c_str());
+
+    /* Send message to the server *
+    n = write(socket, buffer, strlen(buffer));
+
+    if (n < 0) {
+        perror("ERROR writing to socket");
+        exit(1);
+    }
+}
+
+string MyClientHandler::readFromSocket(int socket, char separator) {
+    char c = '\0';
+    int n;
+    string data;
+
+    if (socket < 0) {
+        perror("ERROR socket not found");
+    }
+
+    n = read(socket, &c, 1);
+    while (c != separator) {
+        if (n < 0) {
+            perror("ERROR reading from socket");
+            exit(1);
+        }
+
+        data += c;
+        n = read(socket, &c, 1);
+    }
+
+    return data;
+}
+
+string MyClientHandler::readFromSocket(int socket, string separator) {
+    string data;
+    string temp = readFromSocket(socket, '\n');
+    temp += '\n';
+    while (temp != separator) {
+        data += temp;
+        temp = readFromSocket(socket, '\n');
+        temp += '\n';
+    }
+    return data;
+}
+*/

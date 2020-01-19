@@ -9,14 +9,25 @@
 #include <thread>
 #include "Server.h"
 using namespace std;
-using namespace server_side;
-class MyParallelServer : Server{
+namespace server_side {
+    class MyParallelServer : public Server {
 
-    queue<thread> myThreads;
+    private:
+        int serverSocket;
 
-public:
+        void start(int serverSocket, ClientHandler &c);
 
-};
+    public:
+        queue<thread> threads_queue;
 
+        MyParallelServer();
+
+        void stop() override;
+
+        void handle(int clientSocket, ClientHandler &c);
+
+        void open(int port, ClientHandler &c);
+    };
+}
 
 #endif //ADVANCEDPROG2_MYPARALLELSERVER_H
