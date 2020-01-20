@@ -64,6 +64,7 @@ SolverMatrix::SolverMatrix(ISearcher<Point> *searcher) {
  */
 string SolverMatrix::solve(Searchable<Point> *problem) {
     vector<State<Point> *> solution = this->searcher->search(problem);
+    cout<<"number of nodes : " << this->searcher->getNumberOfNodesEvaluated()<<endl;
     cout<<"path cost: " << solution[solution.size()-1]->getTotalCost()<<endl;
     return getPath(solution);
 }

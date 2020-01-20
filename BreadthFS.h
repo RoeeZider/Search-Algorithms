@@ -19,7 +19,7 @@ class BreadthFS : public Searcher<Node> {
 public:
     vector<State<Node> *> search(Searchable<Node> *searchable) override;
 
-    BreadthFS(Node) {
+    BreadthFS(){
         this->evaluatedNodes = 0;
         this->pathCost = 0;
     }

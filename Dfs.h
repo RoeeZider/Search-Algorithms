@@ -53,7 +53,7 @@ vector<State<Node> *> DFS<Node>::search(Searchable<Node> *searchable) {
 //take the object in the top of the queue
         stackDfs.pop();
 
-        this->evaluatedNodes++;
+//        this->evaluatedNodes++;
 
 //we check if we arrive the end and found our path
         if (curS->equals(endS)) {
@@ -72,6 +72,8 @@ vector<State<Node> *> DFS<Node>::search(Searchable<Node> *searchable) {
                 temp->setIsMarked(true);
                 temp->setCameFrom(curS);
                 stackDfs.push(temp);
+                this->evaluatedNodes++;
+
             }
         }
 

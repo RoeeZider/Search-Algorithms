@@ -65,8 +65,10 @@ CMakeFiles/advancedProg2.dir/SolverMatrix.cpp.o: ../State.h
 
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../AStar.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../BestFirstSearch.h
+CMakeFiles/advancedProg2.dir/main.cpp.o: ../BreadthFS.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../CacheManager.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../ClientHandler.h
+CMakeFiles/advancedProg2.dir/main.cpp.o: ../Dfs.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../FileCacheManager.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../ISearcher.h
 CMakeFiles/advancedProg2.dir/main.cpp.o: ../Matrix.h

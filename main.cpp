@@ -12,6 +12,8 @@
 #include "BestFirstSearch.h"
 #include "AStar.h"
 #include "MyParallelServer.h"
+#include "Dfs.h"
+#include "BreadthFS.h"
 using namespace std;
 namespace boot {
     class Main{
@@ -25,15 +27,33 @@ namespace boot {
                 // port number not found
                 return 0;
             }
-            // the A* algorithm is the best!!!
-            ISearcher<Point>* aStarAlgo = new AStar<Point>();
-            SolverMatrix m(aStarAlgo);
-            //FileCacheManager<std::string, std::string> *cache = new FileCacheManager<std::string,std::string>();
             CacheManager<string, string> *fileCache = new FileCacheManager();
-            MyClientHandler c(m, fileCache);
+
+
+            ISearcher<Point>* aStarAlgo = new AStar<Point>();
+            ISearcher<Point>* bestFS = new BestFirstSearch<Point>();
+            ISearcher<Point>* dfs = new DFS<Point>();
+            ISearcher<Point>* bfs = new BreadthFS<Point>();
+
+            SolverMatrix m1(aStarAlgo);
+            SolverMatrix m2(bestFS);
+            SolverMatrix m3(dfs);
+            SolverMatrix m4(bfs);
+
+            MyClientHandler c1(m1, fileCache);
+            MyClientHandler c2(m2, fileCache);
+            MyClientHandler c3(m3, fileCache);
+            MyClientHandler c4(m4, fileCache);
+
             auto *server=new MyParallelServer();
-           server->open(port,&c);
+
+            //The A* algorithm is the best!!
+           server->open(port,&c1);
+
             delete(aStarAlgo);
+            delete(bestFS);
+            delete(dfs);
+            delete(bfs);
             return 0;
         }
     };
