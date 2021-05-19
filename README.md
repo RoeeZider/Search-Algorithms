@@ -39,7 +39,7 @@ end
 
 a. Exceute the code using the terminal or any c++ work environment. The program will wait for a connection from a client. If no client logs on to the server within 2 minutes - the server will shut down.
 
-b. open a parallel server that bring to the server the problem(in our case - the maxtrix).
+b. open a parallel server that bring to the server the problem(in our case - the matrix).
 
 c. finally, we get the solution for the problen- The shortest route from start point to the end point.
 
